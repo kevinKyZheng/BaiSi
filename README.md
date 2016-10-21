@@ -6,3 +6,4 @@
     3.清除缓存
     4.设计登录界面
     5.九宫格界面
+![image](https://github.com/kevinKyZheng/BaiSi/raw/master/screenshot/7B103F88-337F-4A66-B0C6-A8FEEEF9927D.png)
