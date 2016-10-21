@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  Baisi_New
+//
+//  Created by 郑开元 on 16/5/17.
+//  Copyright © 2016年 郑开元. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIBarButtonItem+KYExtension.h"
+#import "UIView+ViewFrameExt.h"
+#import "NSDate+KYComparaion.h"
+#import "UITextField+KYPlaceHolderColor.h"
+#import "KYConst.h"
+#import "UIImage+KYExtension.h"
+#import "UIImageView+KYExtentsion.h"
+#import "NSArray+KYDescription.h"
+#import "NSDictionary+KYDescription.h"
+//日志输出
+#ifdef DEBUG //开发阶段
+#define KYLOG(...) NSlog(__VA_ARGS)
+#else
+#define KYLOG(...)
+#endif
+//颜色
+#define KYColor(r,g,b) KYARGBColor(255,r,g,b)
+#define KYARGBColor(a,r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define KYGrayColor(v) KYColor((v),(v),(v))
+#define KYBgColor KYGrayColor(215)
+//弱引用
+#define KYWeakSelf __weak typeof(self) weakSelf = self;
+#endif /* PrefixHeader_pch */
+//
+#define KYCommonMargin 10
+//屏幕尺寸
+#define KYScreenW [UIScreen mainScreen].bounds.size.width
+#define KYScreenH [UIScreen mainScreen].bounds.size.height

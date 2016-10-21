@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="143" id="diH-xM-tkm" customClass="KYTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="428" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="diH-xM-tkm" id="qkZ-I3-qHB">
+                <frame key="frameInset" width="428" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-eI-1oJ">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Swm-LV-E41"/>
+                            <constraint firstAttribute="height" constant="50" id="d4i-ZE-Ylb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swD-hj-3yt">
+                        <frame key="frameInset" minX="94" minY="46" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DUz-Iv-5Ye">
+                        <frame key="frameInset" minX="94" minY="75" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swg-08-c3S">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="Dpb-6S-6ro"/>
+                            <constraint firstAttribute="height" constant="30" id="TgW-8N-VDw"/>
+                        </constraints>
+                        <state key="normal" title="+订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="1" green="0.36145266390000003" blue="0.13991172709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="titleShadowColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="bNo-eI-1oJ" firstAttribute="centerY" secondItem="qkZ-I3-qHB" secondAttribute="centerY" id="58Y-Zu-Yfc"/>
+                    <constraint firstItem="swD-hj-3yt" firstAttribute="leading" secondItem="bNo-eI-1oJ" secondAttribute="trailing" constant="15" id="DNc-Wi-d04"/>
+                    <constraint firstItem="DUz-Iv-5Ye" firstAttribute="bottom" secondItem="bNo-eI-1oJ" secondAttribute="bottom" id="Fms-vG-zbE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="swg-08-c3S" secondAttribute="trailing" constant="22" id="N5H-Oc-wrb"/>
+                    <constraint firstItem="DUz-Iv-5Ye" firstAttribute="leading" secondItem="swD-hj-3yt" secondAttribute="leading" id="T76-GL-Bx9"/>
+                    <constraint firstItem="swD-hj-3yt" firstAttribute="top" secondItem="bNo-eI-1oJ" secondAttribute="top" id="dee-1e-fGF"/>
+                    <constraint firstItem="bNo-eI-1oJ" firstAttribute="leading" secondItem="qkZ-I3-qHB" secondAttribute="leadingMargin" constant="20" id="qiR-3c-IGZ"/>
+                    <constraint firstItem="swg-08-c3S" firstAttribute="centerY" secondItem="qkZ-I3-qHB" secondAttribute="centerY" id="sU5-Ej-Ny6"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageListView" destination="bNo-eI-1oJ" id="tYy-vh-JuW"/>
+                <outlet property="subNumberLabel" destination="DUz-Iv-5Ye" id="Y77-T2-nuf"/>
+                <outlet property="themeLabel" destination="swD-hj-3yt" id="iXq-Ic-bDW"/>
+            </connections>
+            <point key="canvasLocation" x="319" y="278.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+    </resources>
+</document>
